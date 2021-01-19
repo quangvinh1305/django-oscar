@@ -10,7 +10,7 @@ location = lambda x: os.path.join(
 
 DEBUG = env.bool('DEBUG', default=True)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1', 'firmsone.com'])
 
 EMAIL_SUBJECT_PREFIX = '[Oscar sandbox] '
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -39,13 +39,13 @@ CACHES = {
 # On Unix systems, a value of None will cause Django to use the same
 # timezone as the operating system.
 USE_TZ = True
-TIME_ZONE = 'Europe/London'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-gb'
+LANGUAGE_CODE = 'vi'
 
 # Includes all languages that have >50% coverage in Transifex
 # Taken from Django's default setting for LANGUAGES
@@ -72,6 +72,7 @@ LANGUAGES = (
     ('sk', gettext_noop('Slovak')),
     ('uk', gettext_noop('Ukrainian')),
     ('zh-cn', gettext_noop('Simplified Chinese')),
+    ('vi', gettext_noop('Vietnamese')),
 )
 
 SITE_ID = 1
@@ -364,7 +365,7 @@ from oscar.defaults import *
 # Meta
 # ====
 
-OSCAR_SHOP_TAGLINE = 'Sandbox'
+OSCAR_SHOP_TAGLINE = 'Thực Phẩm chức năng'
 
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True
